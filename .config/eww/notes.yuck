@@ -1,0 +1,11 @@
+(defpoll notes_text :interval "1s" "cat ~/.local/share/notes/board.md || true")
+
+(defwindow notes-bg
+  :monitor 0
+  :geometry (geometry :x "0" :y "0" :width "100%" :height "100%")
+  :stacking "bottom"       ; <- below normal app windows
+  :exclusive false          ; don't reserve space
+  :focusable "none"         ; display-only on the desktop
+  (box :class "notes-bg" :orientation "vertical" :space-evenly false
+       (label :wrap true :text {notes_text})))
+

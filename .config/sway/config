@@ -4,6 +4,24 @@
 #
 # Read `man 5 sway` for a complete reference.
 
+### Solarized Dark Color Scheme
+set $base03   #002b36
+set $base02   #073642
+set $base01   #586e75
+set $base00   #657b83
+set $base0    #839496
+set $base1    #93a1a1
+set $base2    #eee8d5
+set $base3    #fdf6e3
+set $yellow   #b58900
+set $orange   #cb4b16
+set $red      #dc322f
+set $magenta  #d33682
+set $violet   #6c71c4
+set $blue     #268bd2
+set $cyan     #2aa198
+set $green    #859900
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -235,6 +253,7 @@ exec zerotier_desktop_ui
 default_border pixel 2
 
 bindsym $mod+p exec grim -g "$(slurp -d)" - | wl-copy
+bindsym $mod+Shift+p exec grim - | wl-copy
 
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
@@ -248,6 +267,13 @@ bindsym XF86AudioPrev exec playerctl previous
 
 set $lock 'swaylock -f -c 000000'
 bindswitch --reload --locked lid:on exec $lock
+
+
+# eww notes
+exec eww daemon
+set $notes_file ${HOME}/.local/share/notes/board.md
+bindsym $mod+n exec ${TERMINAL:-alacritty} -e bash -lc 'vim $notes_file'
+
 
 
 include /etc/sway/config.d/*

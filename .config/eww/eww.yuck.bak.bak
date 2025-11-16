@@ -1,0 +1,7 @@
+(defwindow test-notes
+  :monitor 0
+  :geometry (geometry :x "40px" :y "40px" :width "480px" :height "320px")
+  :stacking "bottom"
+  :exclusive false
+  (box :class "card"
+       (label :text "Hello from eww — overlay layer")))

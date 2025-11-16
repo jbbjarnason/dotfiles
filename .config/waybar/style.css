@@ -1,0 +1,143 @@
+/* Solarized Dark Theme for Waybar - Direct Color Values */
+
+/* 
+   Solarized Dark Palette:
+   base03: #002b36
+   base02: #073642
+   base01: #586e75
+   base00: #657b83
+   base0:  #839496
+   base1:  #93a1a1
+   base2:  #eee8d5
+   base3:  #fdf6e3
+   yellow: #b58900
+   orange: #cb4b16
+   red:    #dc322f
+   magenta:#d33682
+   violet: #6c71c4
+   blue:   #268bd2
+   cyan:   #2aa198
+   green:  #859900
+*/
+
+#waybar {
+    background-color: #073642; /* base02 */
+    color: #839496; /* base0 */
+    border-bottom: 2px solid #586e75; /* base01 */
+    font-family: "Fira Code", monospace;
+    font-size: 12px;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+}
+
+#workspaces button {
+    padding: 5px 10px;
+    margin: 0 8px;
+    border-radius: 3px;
+    background-color: #002b36; /* base03 */
+    color: #839496; /* base0 */
+    border: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#workspaces button.focused {
+    background-color: #268bd2; /* blue */
+    color: #fdf6e3; /* base3 */
+}
+
+#workspaces button.active {
+    background-color: #586e75; /* base01 */
+    color: #839496; /* base0 */
+}
+
+#workspaces button.urgent {
+    background-color: #dc322f; /* red */
+    color: #fdf6e3; /* base3 */
+}
+
+#workspaces button:hover {
+    background-color: #586e75; /* base01 */
+    color: #fdf6e3; /* base3 */
+}
+
+/*#custom/status {
+    padding: 0 10px;
+    color: #839496;
+    display: flex;
+    align-items: center;
+}*/
+
+#clock {
+    padding: 0 10px;
+    color: #839496; /* base0 */
+    font-weight: bold;
+}
+
+#tray {
+    padding: 0 10px;
+}
+
+.title {
+    color: #93a1a1; /* base1 */
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#separator {
+    color: #586e75; /* base01 */
+    margin: 0 5px;
+}
+
+#volume {
+    padding: 5px 10px;
+    color: #859900; /* green */
+    background-color: #073642; /* base02 */
+    border-radius: 3px;
+    /* display: flex; 
+    align-items: center; 
+    margin: 0 10px; */
+}
+
+#volume:hover {
+    background-color: #268bd2; /* blue */
+    color: #fdf6e3; /* base3 */
+}
+
+#network {
+    padding: 5px 10px;
+    color: #2aa198; /* cyan */
+    background-color: #073642; /* base02 */
+    border-radius: 3px;
+    /* display: flex;
+    align-items: center;
+    margin: 0 10px; */
+}
+
+#network:hover {
+    background-color: #268bd2; /* blue */
+    color: #fdf6e3; /* base3 */
+}
+
+.icon {
+    /* width: 16px; */
+    /* height: 16px; */
+    /* fill: #839496; */ /* base0 */
+    margin-right: 5px;
+}
+
+.scrollbar {
+    background-color: #073642; /* base02 */
+    color: #839496; /* base0 */
+    border: none;
+}
+
+.scrollbar slider {
+    background-color: #586e75; /* base01 */
+    border-radius: 3px;
+}
+
+.scrollbar slider:hover {
+    background-color: #268bd2; /* blue */
+}
+

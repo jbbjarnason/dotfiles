@@ -1,0 +1,10 @@
+* { all: unset; }
+.notes-bg {
+  padding: 24px;
+  margin: 40px;
+  background: rgba(30, 30, 30, 0.45);
+  border-radius: 16px;
+  font-family: monospace;
+  font-size: 14px;
+}
+

@@ -1,0 +1,18 @@
+;; Path to your notes file (change if you like)
+(defvar notes_file "~/.local/share/notes/board.md")
+
+;; Re-read the file every second
+(defpoll notes_text :interval "1s" :initial ""
+  "cat \"$EWW_VAR_notes_file\" 2>/dev/null || true")
+
+;; Desktop notes window (behind everything)
+(defwindow notes
+  :monitor 0
+  :geometry (geometry :x "0" :y "0" :width "100%" :height "100%")
+  :stacking "bottom"     ; <— this makes apps appear in front
+  :exclusive false
+  :focusable false
+  (box :class "notes-bg" :halign "start" :valign "start"
+       (scroll :vscroll true
+         (label :wrap true :text {notes_text}))))
+
